@@ -1,0 +1,10 @@
+- name: Configure NTP servers for an ESXi Host
+  vmware_host_ntp:
+    hostname: vcenter.akaicloud.com
+    username: administrator@akaicloud.com
+    password: bismill4H71!
+    esxi_hostname: server01.akaicloud.com
+    ntp_servers:
+        - 0.pool.ntp.org
+        - 1.pool.ntp.org
+  delegate_to: localhost
